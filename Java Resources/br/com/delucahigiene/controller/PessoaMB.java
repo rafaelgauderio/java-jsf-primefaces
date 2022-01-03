@@ -17,6 +17,7 @@ public class PessoaMB implements Serializable{
 	
 	private static final long serialVersionUID = 1L;
 	
+	//notação inject para gerenciar atraves do cdi (contexts and dependency injection)
 	@Inject
 	private Pessoa pessoa;
 	
@@ -54,13 +55,6 @@ public class PessoaMB implements Serializable{
 		
 		pessoa = new Pessoa();
 	}
-	
-	
-	
-	
-	
-	
-	
 	
 	
 	
