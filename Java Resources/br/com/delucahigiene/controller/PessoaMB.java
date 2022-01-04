@@ -57,7 +57,7 @@ public class PessoaMB implements Serializable{
 		pessoas.add(pessoa);
 		limpar();
 		
-		return null;
+		return "paginas/Sucesso";
 		
 		
 	}
