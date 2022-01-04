@@ -2,35 +2,37 @@
 <!DOCTYPE html>  
 <html xmlns="http://www.w3.org/1999/xhtml"
 	xmlns:h="http://xmlns.jcp.org/jsf/html"
-	xmlns:f="http://xmlns.jcp.org/jsf/core">	
+	xmlns:f="http://xmlns.jcp.org/jsf/core"
+	xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+	xmlns:p="http://primafaces.org/ui">	
 <h:head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
 <title>Insert title here</title>
 </h:head>
 <h:body>
 	 <h1>Cadastro de Aluno</h1>
-	 <h:form>
+	 <h:form id="form">
 	 	<h:panelGrid columns="2">
-	 		<h:outputText value="Nome"/>
-	 		<h:inputText value="#{bean.pessoa.nome}"/>
-	 		<h:outputText value="E-mail"/>
-	 		<h:inputText value="#{bean.pessoa.email}"/>
-	 		<h:outputText/>
-	 		<h:commandButton value="Adicionar" action="#{bean.adicionar}"/>
-	 		<h:outputText/>
-	 		<h:commandButton value="Parar" action="#{bean.parar}"/>	 	 
+	 		<p:outputLabel value="Nome"/>
+	 		<p:inputText value="#{bean.pessoa.nome}"/>
+	 		<p:outputlabel value="E-mail"/>
+	 		<p:inputText value="#{bean.pessoa.email}"/>
+	 		<p:outputLabel/>
+	 		<p:commandButton value="Adicionar" action="#{bean.adicionar}" update="form tabelaPessoa"/>
+	 		<p:outputLabel/>
+	 		<p:commandButton value="Parar" action="#{bean.parar}"/>	 	 
 	 	</h:panelGrid>
 	 </h:form>
 	 
 	 <h1>Lista de Pessoas</h1>
 	 
-	 <h:dataTable value="{bean.pessoas}" var="p" border="1">
-	 	<h:column>#{p.nome}</h:column>
-	 	<h:column>#{p.email}</h:column>
-	 	<h:column>
-	 		<h:button value="Editar" outcome="/paginas/Sucesso.xhtml?parametro=#{p.nome}"/>
-	 	</h:column>
-	 </h:dataTable>	
+	 <p:dataTable value="{bean.pessoas}" var="p" border="1" id="tabelaPessoa">
+	 	<p:column headerText="Nome">#{p.nome}</h:column>
+	 	<p:column headerText="E-mail">#{p.email}</h:column>
+	 	<p:column headerText="Editar">
+	 		<p:button value="Editar" outcome="/paginas/Sucesso.xhtml?parametro=#{p.nome}"/>
+	 	</p:column>
+	 </p:dataTable>	
 	 	
 	 
 	 
