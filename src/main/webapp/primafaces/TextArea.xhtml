@@ -12,50 +12,50 @@
 	<title>Treinamento JSF e Primefaces</title>
 </h:head>
 <h:body>
+	<p:layout fullPage="true">
+		<p:layoutUnit position="north" size="150" header="Topo do layout">
+			<header>
+				<div style="float: left; margin-left: 10px">
+					<h:graphicImage library="imagens" name="titulo.png" />
+				</div>
+				<div style="float: right">
+					<h:graphicImage library="imagens" name="logo.png" width="75" />
+				</div>
 
-	<header>
-		<div style="float: left; margin-left: 10px">
-			<h:graphicImage library="imagens" name="titulo.png" />
-		</div>
-		<div style="float: right">
-			<h:graphicImage library="imagens" name="logo.png" width="75" />
-		</div>
+			</header>
+		</p:layoutUnit>
 
-	</header>
+		<p:layoutUnit position="west" header="Menu Lateral" resizable="true"
+			collapsible="true" size=30>
+			<h:form>
+				<p:menu style="widht=100%">
+					<p:menuitem value="Cadastro" />
+					<p:menuitem value="Consulta" />
+					<p:menuitem value="Sair" />
+				</p:menu>
+			</h:form>
+		</p:layoutUnit>
 
-	<h1>Area de ferramentas e botões</h1>
+		<p:layoutUnit position="center">
+			<h:form>
+				<p:editor>
+			</h:form>
+			</p:layoutUnit>
 
-	<p:toolbar>
-
-		<h:form id="form">
-			<p:facet name="left">
-				<p:button value="Novo" icon="ui-icon-document" />
-				<p:button value="Abrir" icon="ui-icon-folder-open" />
-
-				<span class="ui-separator"> <span
-					class="ui-icon ui-icon-grip-dotted-vertical" />
-				</span>
-
-				<p:button icon="ui-icon-disk" />
-				<p:button icon="ui-icon-trash" />
-				<p:button icon="ui-icon-print" />
-			</p:facet>
-
-			<f:facet name="right">
-				<p:menuButton value="Opções">
-					<p:menuitem value="Salvar" icon="ui-icon-disk" />
-					<p:menuitem value="Alterar" icon="ui-icon-arrowrefresh-1-w" />
-					<p:menuitem value="Deletar" icon="ui-icon-trash" />
-				</p:menuButton>
-			</f:facet>
-	</p:toolbar>
+		</p:layout>
 
 
 
 
 
+	</p:layout>
 
-	</h:form>
+
+
+
+
+
+
 
 
 </h:body>
