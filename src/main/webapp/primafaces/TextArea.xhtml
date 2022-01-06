@@ -22,20 +22,39 @@
 		</div>
 
 	</header>
-	
-	<h:form id="form">
 
-	<h1>Area de texto</h1>
-	
-	<p:inputTextarea rows="6" style="widht=50%" maxlengh="100" placeholder="Observações"
-	counter="saida" counterTemplate="{0} caracteres restantes(s)"/>	
-	
-	<br/>
-	
-	<p:outputlabel id="saida"/>
-	
-		
-	
+	<h1>Area de ferramentas e botões</h1>
+
+	<p:toolbar>
+
+		<h:form id="form">
+			<p:facet name="left">
+				<p:button value="Novo" icon="ui-icon-document" />
+				<p:button value="Abrir" icon="ui-icon-folder-open" />
+
+				<span class="ui-separator"> <span
+					class="ui-icon ui-icon-grip-dotted-vertical" />
+				</span>
+
+				<p:button icon="ui-icon-disk" />
+				<p:button icon="ui-icon-trash" />
+				<p:button icon="ui-icon-print" />
+			</p:facet>
+
+			<f:facet name="right">
+				<p:menuButton value="Opções">
+					<p:menuitem value="Salvar" icon="ui-icon-disk" />
+					<p:menuitem value="Alterar" icon="ui-icon-arrowrefresh-1-w" />
+					<p:menuitem value="Deletar" icon="ui-icon-trash" />
+				</p:menuButton>
+			</f:facet>
+	</p:toolbar>
+
+
+
+
+
+
 	</h:form>
 
 
